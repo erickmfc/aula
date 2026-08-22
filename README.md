@@ -37,7 +37,7 @@ O Estuda+ não substitui o portal da faculdade. Ele complementa as informações
 
 ## Status
 
-Em desenvolvimento - MVP da primeira tela e das principais interações.
+MVP funcional - primeira tela e principais interações disponíveis.
 
 ## Como executar
 

@@ -13,6 +13,7 @@ O Estuda+ foi pensado para complementar o portal da faculdade. A proposta é aju
 - Controle de faltas com cálculo de limite;
 - Lembretes com criação e conclusão;
 - Estágio com percentual, horas e linha do tempo;
+- Tela de atividades com cadastro, validação de campo vazio, listagem e remoção;
 - Projeto executando com Expo.
 
 ## Próximas etapas

@@ -1,6 +1,6 @@
 # Estrutura do aplicativo
 
-O projeto usa uma única entrada `App.js`, separada em telas e componentes pequenos para manter o MVP fácil de entender.
+O projeto usa o `App.js` como entrada e separa a funcionalidade da aula em pastas simples, mantendo o MVP fácil de entender.
 
 ## Telas
 
@@ -8,6 +8,7 @@ O projeto usa uma única entrada `App.js`, separada em telas e componentes peque
 - `AbsencesScreen`: controle de faltas por disciplina;
 - `RemindersScreen`: criação e conclusão de lembretes;
 - `InternshipScreen`: progresso e linha do tempo do estágio.
+- `src/screens/CadastroScreen.js`: cadastro de atividades com `TextInput`, `useState` e `FlatList`.
 
 ## Componentes reutilizados
 
@@ -16,6 +17,13 @@ O projeto usa uma única entrada `App.js`, separada em telas e componentes peque
 - barra de progresso;
 - títulos de seção;
 - botões e campos de entrada.
+- `src/components/ItemLista.js`: item reutilizável da lista com opção de remover.
+
+## Pastas
+
+- `src/components/`: componentes que podem ser reutilizados;
+- `src/screens/`: telas do aplicativo;
+- `src/services/`: reservado para futura API ou banco de dados.
 
 ## Estado local
 

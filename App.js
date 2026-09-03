@@ -11,6 +11,7 @@ import {
   View,
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
+import CadastroScreen from './src/screens/CadastroScreen';
 
 const COLORS = {
   background: '#F6F8FC',
@@ -223,7 +224,7 @@ function InternshipScreen({ stage, onRecordDay }) {
 }
 
 function TabBar({ active, onChange }) {
-  const tabs = [{ key: 'inicio', label: 'Início', icon: 'home-outline', activeIcon: 'home' }, { key: 'faltas', label: 'Faltas', icon: 'book-outline', activeIcon: 'book' }, { key: 'lembretes', label: 'Lembretes', icon: 'notifications-outline', activeIcon: 'notifications' }, { key: 'estagio', label: 'Estágio', icon: 'briefcase-outline', activeIcon: 'briefcase' }];
+  const tabs = [{ key: 'inicio', label: 'Início', icon: 'home-outline', activeIcon: 'home' }, { key: 'faltas', label: 'Faltas', icon: 'book-outline', activeIcon: 'book' }, { key: 'lembretes', label: 'Lembretes', icon: 'notifications-outline', activeIcon: 'notifications' }, { key: 'estagio', label: 'Estágio', icon: 'briefcase-outline', activeIcon: 'briefcase' }, { key: 'atividades', label: 'Atividades', icon: 'list-outline', activeIcon: 'list' }];
   return <View style={styles.tabBar}>{tabs.map((tab) => { const selected = active === tab.key; return <Pressable key={tab.key} style={styles.tabItem} onPress={() => onChange(tab.key)}><Icon name={selected ? tab.activeIcon : tab.icon} size={21} color={selected ? COLORS.primary : COLORS.muted} /><Text style={[styles.tabLabel, selected && styles.tabLabelActive]}>{tab.label}</Text></Pressable>; })}</View>;
 }
 
@@ -241,6 +242,7 @@ export default function App() {
     if (activeTab === 'faltas') return <AbsencesScreen subjects={subjects} onAddAbsence={addAbsence} />;
     if (activeTab === 'lembretes') return <RemindersScreen reminders={reminders} onAdd={addReminder} onToggle={toggleReminder} />;
     if (activeTab === 'estagio') return <InternshipScreen stage={stage} onRecordDay={recordDay} />;
+    if (activeTab === 'atividades') return <CadastroScreen />;
     return <HomeScreen subjects={subjects} reminders={reminders} stage={stage} goTo={setActiveTab} />;
   }, [activeTab, subjects, reminders, stage]);
 
@@ -338,7 +340,7 @@ const styles = StyleSheet.create({
   primaryButton: { height: 51, borderRadius: 15, backgroundColor: COLORS.primary, flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 8 },
   primaryButtonText: { color: '#FFFFFF', fontSize: 14, fontWeight: '800' },
   tabBar: { backgroundColor: COLORS.card, borderTopWidth: 1, borderTopColor: COLORS.line, height: 72, paddingHorizontal: 12, flexDirection: 'row', justifyContent: 'space-around', alignItems: 'center' },
-  tabItem: { alignItems: 'center', justifyContent: 'center', gap: 4, minWidth: 70 },
+  tabItem: { alignItems: 'center', flex: 1, justifyContent: 'center', gap: 4, minWidth: 58 },
   tabLabel: { color: COLORS.muted, fontSize: 10, fontWeight: '600' },
   tabLabelActive: { color: COLORS.primary, fontWeight: '800' },
 });

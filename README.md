@@ -22,7 +22,14 @@ Oferecer uma visão simples da vida acadêmica do aluno, mostrando o que exige a
 - Lembretes pessoais com opção de concluir;
 - Controle de horas e percentual do estágio;
 - Linha do tempo dos dias realizados;
+- Cadastro de atividades com validação, listagem e remoção;
 - Interface inicial funcional em React Native.
+
+## Organização usada na aula
+
+- `src/components/ItemLista.js`: componente reaproveitável de cada item;
+- `src/screens/CadastroScreen.js`: tela com estado, formulário e `FlatList`;
+- `src/services/`: espaço reservado para uma futura API ou banco de dados.
 
 ## Diferencial
 
